@@ -47,7 +47,58 @@ Before installing this project you should have:
 The instructions have been tested on Home Assistant OS but should also work on other installation methods.
 
 ---
+## Address Configuration
 
+The FEV service identifies addresses using URL encoded address strings.
+
+Swedish characters must be URL encoded:
+
+| Character | URL Encoded |
+|------------|------------|
+| å | %C3%A5 |
+| ä | %C3%A4 |
+| ö | %C3%B6 |
+| space | %20 |
+
+Example:
+
+```text
+Yttertänger 83
+```
+
+becomes:
+
+```text
+Yttert%C3%A4nger%2083
+```
+
+> [!IMPORTANT]
+> FEV expects a space between the street name and house number.
+>
+> Correct:
+>
+> ```text
+> Yttert%C3%A4nger%2083
+> ```
+>
+> Incorrect:
+>
+> ```text
+> Yttert%C3%A4nger83
+> ```
+>
+> ```text
+> Yttertänger83
+> ```
+>
+> ```text
+> Yttertänger+83
+> ```
+>
+
+If all waste fractions return empty values, verify that the configured address matches the URL format expected by FEV.
+
+---
 # Installation
 
 ## 1. Copy the Python Script
