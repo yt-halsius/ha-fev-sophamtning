@@ -1,0 +1,16 @@
+- sensor:
+    - name: "Nästa matavfall"
+      device_class: date
+      state: "{{ state_attr('sensor.fev_sophamtning', 'matavfall') }}"
+
+    - name: "Nästa plast"
+      device_class: date
+      state: "{{ state_attr('sensor.fev_sophamtning', 'plast') }}"
+
+    - name: "Nästa restavfall"
+      device_class: date
+      state: "{{ state_attr('sensor.fev_sophamtning', 'restavfall') }}"
+
+    - name: "Nästa papper"
+      device_class: date
+      state: "{{ state_attr('sensor.fev_sophamtning', 'papper') }}"
