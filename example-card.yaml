@@ -1,0 +1,36 @@
+type: entities
+title: Sophämtning
+state_color: false
+entities:
+  - entity: sensor.nasta_matavfall
+    name: Matavfall
+    icon: recycling-se:mat
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color: #00A651;
+        }
+  - entity: sensor.nasta_plast
+    name: Plastförpackningar
+    icon: recycling-se:plast
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color: #A200A8;
+        }
+  - entity: sensor.nasta_restavfall
+    name: Restavfall
+    icon: recycling-se:restavfall
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color: #666666;
+        }
+  - entity: sensor.nasta_papper
+    name: Pappersförpackningar
+    icon: recycling-se:pappersforpackningar
+    card_mod:
+      style: |
+        :host {
+          --card-mod-icon-color: #C4A46A;
+        }
